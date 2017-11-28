@@ -4,6 +4,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,6 +16,7 @@ import java.io.IOException;
 public class TomcatTest {
 
     @Test
+    @RunAsClient
     public void connectToTomcat() throws IOException {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
             final HttpGet httpGet = new HttpGet("http://localhost:8080");
