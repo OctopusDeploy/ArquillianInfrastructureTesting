@@ -1,0 +1,20 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="
+        http://jboss.org/schema/arquillian
+        http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+    <container qualifier="tomcat8">
+        <configuration>
+            <property name="target">tomcat:8.0.47:managed</property>
+            <property name="serverConfig">standalone.xml</property>
+        </configuration>
+    </container>
+
+    <container qualifier="wildfly9" default="true">
+        <configuration>
+            <property name="target">wildfly:9.0.0.Final:managed</property>
+            <property name="serverConfig">standalone.xml</property>
+        </configuration>
+    </container>
+
+</arquillian>
