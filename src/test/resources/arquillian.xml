@@ -6,6 +6,7 @@
     <container qualifier="tomcat8">
         <configuration>
             <property name="target">tomcat:8.0.47:managed</property>
+            <!-- relative to CATALINA_BASE/conf; catalinaBase is set by chameleon itself -->
             <property name="serverConfig">../../../../../src/test/resources/tomcat8-server.xml</property>
             <property name="user">arquillian</property>
             <property name="pass">arquillian</property>
