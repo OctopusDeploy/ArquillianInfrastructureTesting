@@ -1,4 +1,4 @@
-package wildfly9;
+package tomcat8;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -12,10 +12,10 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @RunWith(Arquillian.class)
-public class WildFlyTest {
+public class TomcatTest {
 
     @Test
-    public void connectToWildFly() throws IOException {
+    public void connectToTomcat() throws IOException {
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
             final HttpGet httpGet = new HttpGet("http://localhost:8080");
             try (CloseableHttpResponse response1 = httpclient.execute(httpGet)) {
